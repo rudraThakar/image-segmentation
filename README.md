@@ -1,14 +1,24 @@
-# 🛰️ Drone Safe Landing Zone Segmentation
+# Drone Safe Landing Zone Segmentation
 
 A multi-class semantic segmentation project to identify **safe landing zones for drones** using high-resolution aerial imagery. This project utilizes **U-Net** with an **EfficientNet-B0** encoder pretrained on ImageNet for robust feature extraction and fast inference.
+With the rapid rise of **drone-based delivery systems**, there is an increasing need for intelligent models that can determine **safe and accessible landing spots** using only onboard RGB cameras.
+This project was created to fill this gap by providing a **Free and Open Source** solution for drone landing zone detection, using only RGB imagery captured by drone-mounted cameras.
 
----
+There are several promising directions for improvement:
+1. DeepLabV3+ with ResNet
+2. Transformer-based architectures (like SegFormer, Swin UNet)
 
-## 📌 Overview
+I encourage ML and computer vision enthusiasts to fork this project and:
+- Experiment with different backbones (e.g., ResNet, MobileNet, Swin Transformer)
+- Test with other segmentation heads like DeepLabV3+
+- Improve accuracy, reduce inference time, or adapt it for real-time deployment
+
+
+##  Overview
 
 This repository presents a deep learning pipeline for detecting safe drone landing zones from aerial images. The model identifies **5 semantic classes** from high-resolution drone images to determine areas such as rooftops, open grounds, and other terrain features.
 
-### ✅ Features
+###  Features
 
 - **U-Net** architecture with **EfficientNet-B0** encoder
 - Pretrained encoder weights from **ImageNet**
@@ -19,7 +29,7 @@ This repository presents a deep learning pipeline for detecting safe drone landi
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 - **Encoder**: EfficientNet-B0 (pretrained on ImageNet)
 - **Decoder**: U-Net style upsampling
@@ -29,7 +39,7 @@ This repository presents a deep learning pipeline for detecting safe drone landi
 
 ---
 
-## 🗃️ Dataset
+##  Dataset
 
 - 400 custom-labeled **high-resolution aerial images**
 - 5 semantic classes including:
@@ -39,13 +49,9 @@ This repository presents a deep learning pipeline for detecting safe drone landi
   - Roads
   - Vegetation
 
-> *Note: The dataset is not open-sourced publicly due to privacy constraints.*
 
 ---
 
-## 🚀 Training
+## Training
 
-```python
-optimizer = tf.keras.optimizers.Adam(learning_rate=1e-3)
-loss_fn = smp.losses.DiceLoss()
-metrics = [MeanIoU(num_classes=5)]
+
