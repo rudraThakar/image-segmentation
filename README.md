@@ -1,17 +1,10 @@
 # Drone Safe Landing Zone Segmentation
 
 A multi-class semantic segmentation project to identify **safe landing zones for drones** using high-resolution aerial imagery. This project utilizes **U-Net** with an **EfficientNet-B0** encoder pretrained on ImageNet for robust feature extraction and fast inference.
+
+
 With the rapid rise of **drone-based delivery systems**, there is an increasing need for intelligent models that can determine **safe and accessible landing spots** using only onboard RGB cameras.
 This project was created to fill this gap by providing a **Free and Open Source** solution for drone landing zone detection, using only RGB imagery captured by drone-mounted cameras.
-
-There are several promising directions for improvement:
-1. DeepLabV3+ with ResNet
-2. Transformer-based architectures (like SegFormer, Swin UNet)
-
-I encourage ML and computer vision enthusiasts to fork this project and:
-- Experiment with different backbones (e.g., ResNet, MobileNet, Swin Transformer)
-- Test with other segmentation heads like DeepLabV3+
-- Improve accuracy, reduce inference time, or adapt it for real-time deployment
 
 
 ##  Overview
