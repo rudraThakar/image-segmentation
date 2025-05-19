@@ -56,7 +56,7 @@ The dataset is publically avaiable at kaggle (https://www.kaggle.com/datasets/sa
 
 ## Results
 
-![Predicted vs Ground Truth](predicted.png)
+![Predicted vs Ground Truth](predictions.png)
 
 
 
