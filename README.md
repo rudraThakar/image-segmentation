@@ -16,16 +16,16 @@ I encourage ML and computer vision enthusiasts to fork this project and:
 
 ##  Overview
 
-This repository presents a deep learning pipeline for detecting safe drone landing zones from aerial images. The model identifies **5 semantic classes** from high-resolution drone images to determine areas such as rooftops, open grounds, and other terrain features.
+This repository presents a deep learning pipeline (using **TenserFlow- Keras**) for detecting safe drone landing zones from aerial images. The model identifies **5 semantic classes** from high-resolution drone images to determine areas such as landing zones, water, and other terrain features.
 
 ###  Features
 
 - **U-Net** architecture with **EfficientNet-B0** encoder
 - Pretrained encoder weights from **ImageNet**
-- Trained on **custom-labeled drone dataset** with 5 classes
+- Trained on **custom-labeled drone dataset(publically available on Kaggle)** with 5 classes
 - Optimized using **Dice Loss** and **Adam optimizer**
 - Evaluated using **Mean Intersection-over-Union (mIoU)**
-- Achieves **0.87 mIoU** with **67ms inference time** per image
+- Achieves **0.76 mIoU** with **67ms inference time** per image
 
 ---
 
@@ -43,15 +43,28 @@ This repository presents a deep learning pipeline for detecting safe drone landi
 
 - 400 custom-labeled **high-resolution aerial images**
 - 5 semantic classes including:
-  - Safe Landing Zones
-  - Obstacles
-  - Buildings
-  - Roads
-  - Vegetation
+  -obstacles
+  -water
+  -soft-surfaces
+  -moving-objects
+  -landing-zones
 
+The dataset is publically avaiable at kaggle (https://www.kaggle.com/datasets/santurini/semantic-segmentation-drone-dataset) and I would like to thank the author of this dataset.
 
 ---
 
-## Training
+
+
+## Future Improvements 
+
+- There are several promising directions for improvement:
+1. DeepLabV3+ with ResNet
+2. Transformer-based architectures (like SegFormer, Swin UNet)
+
+I encourage ML and computer vision enthusiasts to fork this project and:
+- Experiment with different backbones (e.g., ResNet, MobileNet, Swin Transformer)
+- Test with other segmentation heads like DeepLabV3+
+- Improve accuracy, reduce inference time, or adapt it for real-time deployment
+
 
 
