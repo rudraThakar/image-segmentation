@@ -46,6 +46,18 @@ The dataset is publically avaiable at kaggle (https://www.kaggle.com/datasets/sa
 
 ---
 
+## Training
+
+- The model was trained for 100 epochs with early stopping(patience = 3), which was triggered at the 34th epoch
+- Adam's optimizer was used with a learning rate od 1e-4
+
+![Train vs Val](train-test.png)
+
+
+## Results
+
+![Predicted vs Ground Truth](predicted.png)
+
 
 
 ## Future Improvements 
